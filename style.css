@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Colors matching your images exactly */
+:root {
+    --accent-blue: #1b6088;
+    --pill-border: #1382b6;
+    --text-muted: #d1d5db;
+}
+
+/* --- Animations --- */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+.floating {
+    animation: float 4s ease-in-out infinite;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Navigation --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 10%;
+    background-color: #000;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    font-size: 1.1rem;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--accent-blue);
+}
+
+/* --- Layout & Typography --- */
+.container {
+    padding: 50px 10%;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 120px;
+}
+
+.col-2 {
+    flex-basis: 48%;
+}
+
+.text-accent {
+    color: var(--accent-blue);
+}
+
+.horizontal-line {
+    width: 100%;
+    height: 1px;
+    background-color: #ffffff;
+    margin: 20px 0;
+}
+
+/* --- Home Page Specifics --- */
+.hero-title {
+    font-size: 4.5rem;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: 1px;
+}
+
+.hero-subtitle {
+    color: var(--accent-blue);
+    font-size: 1.1rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.intro-title {
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.intro-line {
+    width: 180px;
+    height: 1px;
+    background-color: #ffffff;
+    margin: 20px 0 30px 0;
+}
+
+.intro-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+.social-footer {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.social-footer h2 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.social-icons a {
+    font-size: 1.8rem;
+    color: var(--accent-blue);
+    transition: transform 0.3s;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+
+/* --- About Page Specifics --- */
+.about-title {
+    font-size: 3.5rem;
+    font-weight: 500;
+}
+
+.about-line {
+    width: 150px;
+    height: 1px;
+    background-color: #ffffff;
+    margin: 10px 0 30px 0;
+}
+
+.hobbies {
+    margin-top: 25px;
+}
+
+.hobbies .list-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin-bottom: 12px;
+}
+
+.hobbies .list-item i {
+    color: var(--accent-blue);
+    font-size: 1.2rem;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+
+.section-line {
+    width: 100px;
+    height: 1px;
+    background-color: #ffffff;
+    margin: -35px auto 50px auto;
+}
+
+.skills-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 80px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.skill-pill {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 30px;
+    border: 2px solid var(--pill-border);
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 400;
+    box-shadow: inset 0 0 10px rgba(19, 130, 182, 0.2), 0 0 15px rgba(19, 130, 182, 0.2);
+    transition: all 0.3s ease;
+}
+
+.skill-pill:hover {
+    transform: translateY(-5px);
+    box-shadow: inset 0 0 15px rgba(19, 130, 182, 0.4), 0 0 20px rgba(19, 130, 182, 0.6);
+    background-color: rgba(19, 130, 182, 0.1);
+}
+
+/* --- Resume Page Specifics --- */
+.btn-download-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.btn-download {
+    padding: 12px 35px;
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid var(--accent-blue);
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-download:hover {
+    background-color: var(--accent-blue);
+    transform: translateY(-3px);
+}
+
+/* Recreating the A4 Paper look exactly from your image */
+.resume-document {
+    background-color: #ffffff;
+    color: #000000;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 60px;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+}
+
+.resume-doc-header h1 {
+    color: #0b3d91;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+.resume-doc-header p {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.doc-line {
+    width: 100%;
+    height: 1px;
+    background-color: #cccccc;
+    margin-bottom: 20px;
+}
+
+.resume-doc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 40px;
+}
+
+.doc-section {
+    margin-bottom: 25px;
+}
+
+.doc-section h3 {
+    color: #0b3d91;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.doc-section p, .doc-section ul {
+    font-size: 0.8rem;
+    line-height: 1.6;
+}
+
+.doc-section ul {
+    padding-left: 20px;
+}
+
+.doc-section strong {
+    font-weight: 600;
+}
+
+.icon-text {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 5px;
+}
+
+.icon-text i {
+    font-size: 0.9rem;
+}
