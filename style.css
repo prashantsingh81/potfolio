@@ -210,6 +210,7 @@ a {
 .social-footer {
     text-align: center;
     padding-bottom: 50px;
+    margin-top: 150px;
 }
 
 .social-footer h2 {
@@ -269,7 +270,8 @@ a {
     text-align: center;
     font-size: 3rem;
     font-weight: 500;
-    margin-bottom: 50px;
+    margin-top: 170px;
+    margin-bottom: 40px;
 }
 
 .section-line {
